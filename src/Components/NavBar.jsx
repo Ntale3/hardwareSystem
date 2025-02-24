@@ -5,6 +5,9 @@ import { IoCallSharp } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";//humburger
 import { useState } from "react";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
+
 const NavItems=[
 {
   logo:<FaSearch size={30}/>,
@@ -37,18 +40,18 @@ const ListItems=({item,className})=>{
 }
 const NavBar = () => {
 
-  const[searchBarvisible,SetsearchBarvisible]=useState(false);
+  const[searchBarvisible,SetsearchBarvisible]=useState(true);
   function toggleSearch(icon){
     if(icon===0){
-      SetsearchBarvisible(!searchBarvisible);
+            SetsearchBarvisible(!searchBarvisible);
       
     }
   }
 
 
   return (
-    <div className='flex justify-between  py-4 px-0.5 border-b-[1px] border-gray-400'>
-    <div className="flex gap-6">
+   searchBarvisible ? <div className='flex justify-between  py-4 px-0.5 border-b-[1px] border-gray-400'>
+     <div className="flex gap-6">
       <img src="//www.builddirect.com/cdn/shop/files/logo-blue.png?v=1681982602&width=600" alt="" className="w-[187px]"/> 
           
     </div>
@@ -72,11 +75,21 @@ const NavBar = () => {
        )}
       </ul>
      
-    </div>
-
+    </div>  
     
-    
-    </div>
+    </div>:
+    <div className="flex items-center py-4 px-0.5 shadow-sm justify-center">
+ <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px] ">
+        <AiOutlineSearch size={25} className="text-gray-600"/>
+        <input
+          className="bg-transparent p-2 w-full focus:outline-none"
+          type="text"
+          placeholder="Search ....."
+        />
+        
+      </div>
+      <RxCross2 size={25} onClick={()=>toggleSearch(0)} className="text-gray-600" />
+      </div>
   )
 }
 
