@@ -1,11 +1,10 @@
-import React from 'react'
-import NavBar from '../Components/NavBar'
 import { LuChevronUp } from "react-icons/lu";
 import { IoIosArrowDown } from "react-icons/io";
 import Footer from '../Components/Footer';
 const Cart = () => {
   return (
     <div className=''>
+        
 <div className='p-6'>
     <p>Home 
     <span>/Cart</span></p>
@@ -13,10 +12,10 @@ const Cart = () => {
 
 <div className="mx-auto px-2 m-2 ">
     <ul className='flex justify-between p-6 shadow-sm'>
-        <li>Product</li>
+        <li className=''>Product</li>
         <li className='ml-22 lg:ml-30'>Price</li>
         <li className='ml-2 lg:ml-5'>Quantity</li>
-        <li className=''>Subtotal</li>
+        <li >Subtotal</li>
     </ul>
 </div>
 <div className="mx-auto px-2 shadow-sm m-2  mb-6 ">

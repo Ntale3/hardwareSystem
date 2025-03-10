@@ -1,5 +1,5 @@
-import React from 'react'
-import { IoIosArrowDown } from "react-icons/io";
+// import React from 'react'
+ import { IoIosArrowDown } from "react-icons/io";
 const items=[
     {
       itemName:"Tiles",
@@ -43,27 +43,31 @@ const items=[
         logo:<IoIosArrowDown/>
       },
   ]
-const Categories = () => {
-  return (
-    <div className='lg:flex lg:flex-row grid gap-6 py-4'>
-        
-            {items.map((items,index)=>{
-                return(
-                   
-                    <div key={index} className=' flex flex-col items-center gap-6'>
-                        <div className='px-4 lg:px-2'>
-                        <img src={items.images} alt='logo' className='rounded-full aspect-square object-cover h-[200px] lg:h-[200px]'/>
-                        </div>
-                        <div>
-                            <p className='text-xl lg:text-2xl text-gray-500'>{items.itemName}</p>
-                        </div>
-                    </div>
-                    
-                )
-            })}
-        
-    </div>
-  )
-}
 
-export default Categories
+const ImageWithDescription = ({ imageSrc, description }) => {
+    return (
+        <div className="flex flex-col items-center p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+            <div className="overflow-hidden rounded-lg w-full">
+                <img
+                    src={imageSrc}
+                    alt={description}
+                    className="transition-transform duration-500 ease-in-out transform hover:scale-110 w-full rounded-full aspect-square object-cover"
+                />
+            </div>
+            <p className="mt-2 text-center  text-3xl text-gray-600 ">{description}</p>
+        </div>
+    );
+};
+
+const Categories = () => {
+    return (
+        <div className="flex flex-wrap justify-center gap-6 p-4">
+           {items.map((item, index) => (
+                <ImageWithDescription key={index} imageSrc={item.images} description={item.itemName} />))}
+            
+           
+        </div>
+    ); 
+};
+
+export default Categories;

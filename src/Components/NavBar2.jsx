@@ -5,7 +5,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FaWallet } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
 
-const Navbar2 = () => {
+const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const menuItems = [
@@ -87,4 +87,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar;

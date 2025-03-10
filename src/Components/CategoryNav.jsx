@@ -1,6 +1,8 @@
-import { IoIosArrowDown } from "react-icons/io";
+import React from 'react';
 
-const items=[
+ import { IoIosArrowDown } from "react-icons/io";
+
+ const items=[
     {
       itemName:"Tiles",
       logo:<IoIosArrowDown/>
@@ -41,7 +43,7 @@ const CategoryNav = () => {
         <ul className="flex gap-6">
             {items.map((items,index)=>{
                 return <li key={index} className="flex items-center ml-1.5 ">
-                    <p className="text-xl text-blue-950 hover:text-blue-400 ">{items.itemName}</p> <span className="mt-2 hover:text-blue-400">{items.logo}</span></li>
+                    <p className="text-xl text-blue-950 hover:text-blue-400  ">{items.itemName}</p> <span className="mt-2 hover:text-blue-400">{items.logo}</span></li>
             })}
         </ul>
     </div>
