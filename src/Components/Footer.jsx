@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="bg-[#030406] text-gray-100">
-       <div className='lg:flex lg:justify-between lg:flex-row p-8 mt-4 bg-[#030406] flex flex-col gap-6'>
+       <div className='lg:flex md:flex md:justify-between lg:justify-between md:flex-row lg:flex-row p-8 mt-4 bg-[#030406] flex flex-col gap-6'>
         <div className="">
             <p className="mb-3 text-xl">Support</p>
             <ul className=" flex flex-col gap-4">

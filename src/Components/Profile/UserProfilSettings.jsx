@@ -4,10 +4,10 @@ import Nav from '../Common/Nav'
 
 const UserProfilSettings = () => {
   return (
-    <div className='flex  lg:w-full my-30 gap-60 lg:mx-40 mx-3'>
+    <div className='flex  lg:w-full my-30 gap-20'>
 
 
-<div className='hidden lg:block md:block '>
+<div className='hidden lg:block md:block ml-10'>
 <div>
 <h2 className='font-semibold'>Manage My Account</h2>
 <ul className='my-3 flex-col gap-5'>
@@ -28,7 +28,7 @@ const UserProfilSettings = () => {
 </div>
 {/* {name,placeholder,inputType} */}
 
-<div className='lg:w-1/2 w-full mx-2'>
+<div className='lg:w-1/2 w-full mx-3  lg:ml-60'>
 <div className='flex lg:flex-row md:flex-row flex-col gap-4 w-full'>
 <FormCompo name={"FirstName"} placeholder={"Md"} inputType={'text'}/>
 <FormCompo name={"LastName"} placeholder={"Rimel"} inputType={'text'}/>
@@ -44,11 +44,15 @@ const UserProfilSettings = () => {
     </div>
     
     <div className='flex flex-col gap-4'>
-    <input type="text" name="current-password" placeholder="current password" className='lg:w-full w-full md:w-95 focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
-    <input type="text" name="new-password" placeholder="New password" className='lg:w-full w-full md:w-95 focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
-    <input type="text" name="comfirm-password" placeholder="comfirm password" className='lg:w-full md:w-95 w-full focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
-
+    <input type="text" name="current-password" placeholder="current password" className='lg:w-full w-full md:w-full  focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
+    <input type="text" name="new-password" placeholder="New password" className='lg:w-full w-full md:w-95 md:w-full focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
+    <input type="text" name="comfirm-password" placeholder="comfirm password" className='lg:w-full md:w-95 w-full md:w-full focus:outline-none bg-gray-300  h-10 rounded-b-md'/>
     </div>
+    <div className='flex gap-2 items-center my-2 flex-row-reverse '>
+            <button className='bg-red-700 font-semibold text-white rounded-md p-2'>Save Changes</button>
+            <button className='bg-black font-semibold text-white rounded-md p-2'>Cancel</button>
+    </div>
+
 </div>
 </div>
 
