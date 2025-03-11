@@ -154,7 +154,7 @@ const Nav = () => {
 
 
 
-    <nav className='flex justify-between lg:px-8 pt-6 px-2 lg:border-b-[1px] border-gray-400 '>
+    <nav className='flex justify-between lg:px-8 pt-6 px-2 lg:border-b-[1px] bg-gray-100 border-gray-400 '>
      <div className='flex items-center lg:pl-8 pl-2 hidden lg:block md:block'>
       <p className='font-bold text-2xl'>Categories</p>
      </div>

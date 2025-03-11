@@ -10,16 +10,14 @@ import CheckOut from './Components/Billing/CheckOut'
 import Payment from './Components/Billing/Payment'
 import UserProfilSettings from './Components/Profile/UserProfilSettings'
 import Footer from './Components/Footer'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import NotFound from './Pages/NotFound'
 
 const App = () => {
   return (
 <>
- 
-<Nav/>
-<UserProfilSettings/>
-<Footer/>
-
-
+<About/>
 
 </>
 

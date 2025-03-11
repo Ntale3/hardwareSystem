@@ -21,7 +21,7 @@ const Categ=[
 const AdvertSection = () => {
     return(
         
-        <div className='flex  justify-between '>
+        <div className='flex  justify-between bg-gray-100'>
             {/* categories  */}
                         <div className='hidden lg:block md:block lg:m-4 lg:border-r-[1px] border-gray-300 lg:pr-16 '>
                         <ul className='flex flex-col gap-4 md:gap-2  w-3/4'>

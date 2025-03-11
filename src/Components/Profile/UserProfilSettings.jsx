@@ -22,8 +22,7 @@ const UserProfilSettings = () => {
         <li>My Returns</li>
         <li>My Cancellations</li>
 
-    </ul>
-    
+    </ul>    
 </div>
 </div>
 {/* {name,placeholder,inputType} */}

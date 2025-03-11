@@ -8,7 +8,7 @@ import UserProfilSettings from '../Components/Profile/UserProfilSettings'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-gray-100'>
       <Nav/>
       <AdvertSection/>
       <ComponentName/>
