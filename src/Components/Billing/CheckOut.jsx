@@ -1,7 +1,7 @@
 import React from 'react'
 import FormCompo from './FormCompo'
 import Payment from './Payment'
-import Footer from '../Footer'
+import Footer from '../Common/Footer'
 import Nav from '../Common/Nav'
 const CheckOut = () => {
   return (

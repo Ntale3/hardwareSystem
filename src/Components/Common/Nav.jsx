@@ -5,24 +5,24 @@ import { VscAccount } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {useState} from 'react'
 import { RxCross2 } from "react-icons/rx";
-import Categories from "../Categories";
+import { Link } from "react-router-dom";
 
 const pages=[
     {
         name:'Home',
-        url:'url',
+        url:'/',
     },
     {
         name:'Contact',
-        url:'url',
+        url:'/contact',
     },
     {
         name:'About',
-        url:'url',
+        url:'/about',
     },
     {
         name:'Sign Up',
-        url:'url',
+        url:'/signUp',
     }
                 
 
@@ -105,7 +105,7 @@ const Nav = () => {
             {
                 pages.map((items,index)=>{
                     return <li key={index}className="pl-4">
-                        <p>{items.name}</p>
+                       <Link to={items.url}><p>{items.name}</p></Link> 
                     </li>
                 })
             }
@@ -160,11 +160,11 @@ const Nav = () => {
      </div>
     
      <div >
-      <ul className='flex gap-6 items-center pt-2'>
+      <ul className='flex gap-6 items-center pt-2 cursor-pointer'>
        {
         pages.map((items,index)=>{
             return <li key={index} className="hidden lg:block">
-                {items.name}
+               <Link to={items.url}>{items.name}</Link> 
             </li>
         })
        }  
@@ -184,9 +184,9 @@ const Nav = () => {
                   />
                 </div>
         </li>
-        <li><IoIosHeartEmpty size={25}/></li>
-        <li><LuShoppingCart size={25}/></li>
-        <li><VscAccount size={25}/></li>
+       <Link to={'/wishList'}>  <li><IoIosHeartEmpty size={25}/></li></Link>
+        <Link to={'/cart'}><li><LuShoppingCart size={25}/></li></Link>
+        <Link to={'/profile'}><li><VscAccount size={25}/></li></Link>
         <li className=" lg:hidden" onClick={()=>sideBarToggle()}><GiHamburgerMenu size={25}/></li>
       </ul>
      </div>

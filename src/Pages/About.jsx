@@ -1,12 +1,14 @@
 import { dividerClasses } from '@mui/material';
 import React from 'react';
 import construct from '../Images/4486bd4b-21e0-4eeb-9303-83a02ee9dfce.jpg'
+import Nav from '../Components/Common/Nav';
 const About = () => {
     
 
     return (
     <div>
-        <section className='lg:flex lg:gap-2 lg:mx-3 flex flex-col gap-10 lg:flex-row '>
+        
+        <section className='lg:flex lg:gap-2 lg:mx-3 flex flex-col gap-10 lg:flex-row lg:my-5 '>
             <div className='bg-white w-full h-96 pt-24 '>
 <h1 className='mb-3 mx-2 font-bold lg:text-2xl sm:text-[1px]'>Our Story</h1>
 <p className='mb-3 mx-2 font-serif '>

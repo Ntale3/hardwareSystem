@@ -6,9 +6,28 @@ import {
     Typography,
   } from "@material-tailwind/react";
   import { Link } from "react-router-dom";
+  import { useRef} from "react";
   
-  
-  export function SignUp() {
+export function SignUp() {
+  const nameRef=useRef();
+  const emailRef=useRef();
+  const passwordRef=useRef();
+  const passwordConfirmationRef=useRef();
+
+function OnSubmit(e){
+  e.preventDefault();
+  const payload={
+    name:nameRef.current.value,
+    email:emailRef.current.value,
+    password:passwordRef.current.value,
+    password_confirmation:passwordConfirmationRef.current.value
+  }
+  console.log(payload)
+}
+
+
+
+
     return (
       <section className="m-8 flex">
               <div className="w-2/5 h-full hidden lg:block">
@@ -22,8 +41,22 @@ import {
             <Typography variant="h2" className="font-bold mb-4">Join Us Today</Typography>
             <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your email and password to register.</Typography>
           </div>
-          <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+          <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2" onSubmit={OnSubmit}>
             <div className="mb-1 flex flex-col gap-6">
+            <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                Name
+              </Typography>
+              <Input
+                size="lg"
+                placeholder="your name"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+               ref={nameRef}
+               name="userName"
+              />
+
               <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
                 Your email
               </Typography>
@@ -34,7 +67,35 @@ import {
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
+              ref={emailRef}
               />
+              <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+               Password
+              </Typography>
+              <Input
+                type="password"
+                size="lg"
+                placeholder="desired-password"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                ref={passwordRef}
+              />
+              <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+               Confirm password
+              </Typography>
+              <Input
+                type="password"
+                size="lg"
+                placeholder="confirm-password"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                ref={passwordConfirmationRef}
+              />
+              
             </div>
             <Checkbox
               label={
@@ -54,7 +115,7 @@ import {
               }
               containerProps={{ className: "-ml-2.5" }}
             />
-            <Button className="mt-6" fullWidth>
+            <Button className="mt-6" fullWidth type="submit">
               Register Now
             </Button>
   
@@ -74,16 +135,12 @@ import {
                   </defs>
                 </svg>
                 <span>Sign in With Google</span>
-              </Button>
-              <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
-                <img src="/img/twitter-logo.svg" height={24} width={24} alt="" />
-                <span>Sign in With Twitter</span>
-              </Button>
+              </Button>              
             </div>
             <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
               Already have an account?
-              {/* <Link to="/auth/sign-in" className="text-gray-900 ml-1">Sign in</Link> */}
-              <a href="#" className="text-gray-900 ml-1">Sign in</a>
+              <Link to="/sign-in" className="text-gray-900 ml-1">Sign in</Link>
+              {/* <a href="#" className="text-gray-900 ml-1 hover:text-blue-600">Sign in</a> */}
             </Typography>
           </form>
   

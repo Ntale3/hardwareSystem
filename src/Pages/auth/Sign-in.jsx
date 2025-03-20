@@ -6,9 +6,25 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 
 export function SignIn() {
+
+ const [formData,setFormData]=useState({
+  email:'',
+  password:''
+ })
+
+ const handleFormData=(event)=>{
+      const {name,value}=event.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+ };
+
+ 
+
   return (
     <section className="m-8 flex gap-4">
       <div className="w-full lg:w-3/5 mt-24">
@@ -22,6 +38,9 @@ export function SignIn() {
               Your email
             </Typography>
             <Input
+              name="email"
+              value={formData.email}
+              onChange={handleFormData}
               size="lg"
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -33,6 +52,9 @@ export function SignIn() {
               Password
             </Typography>
             <Input
+              name="password"
+              value={formData.password}
+              onChange={handleFormData}
               type="password"
               size="lg"
               placeholder="********"
@@ -40,6 +62,7 @@ export function SignIn() {
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
+              
             />
           </div>
           <Checkbox
@@ -100,15 +123,12 @@ export function SignIn() {
               </svg>
               <span>Sign in With Google</span>
             </Button>
-            <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
-              <img src="/img/twitter-logo.svg" height={24} width={24} alt="" />
-              <span>Sign in With Twitter</span>
-            </Button>
+            
           </div>
           <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
             Not registered?
             {/* to="/auth/sign-up" */}
-            <a  href="#" className="text-gray-900 ml-1">Create account</a>
+            <Link  to="/signUp" className="text-gray-900 ml-1">Create account</Link>
           </Typography>
         </form>
 

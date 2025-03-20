@@ -1,6 +1,7 @@
 import React from 'react';
 import {IoCallOutline} from "react-icons/io5"
 import { FaRegEnvelope } from 'react-icons/fa';
+
 const Contact = () => {
     return (
         <div className='lg:my-10 md:my-5 sm:my-5'>
@@ -21,7 +22,7 @@ const Contact = () => {
 <div className='flex flex-col ml-2 gap-2 mt-4'>
     <p>We are available 24/7, 7 days a week.</p>
     <p className='pb-6'>Phone: +8801611112222</p>
-    <p><hr/></p>
+    <hr/>
 </div>
 
 <div className='mt-5'>
@@ -47,7 +48,7 @@ const Contact = () => {
 
     </div>
     <div className=''>
-<textarea id="message" rows="4" class="block h-100 resize-none p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg  focus:ring-blue-500 focus:border-blue-500   dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your Message here..."></textarea>
+<textarea id="message" rows="4" className="block h-100 resize-none p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg  focus:ring-blue-500 focus:border-blue-500   dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your Message here..."></textarea>
 
     </div>
     <div className='flex justify-end mt-2 m'>

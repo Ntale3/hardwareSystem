@@ -3,17 +3,14 @@ import Nav from '../Components/Common/Nav'
 import AdvertSection from '../Components/AdvertSection'
 import CategSlider from '../Components/CategSlider'
 import ComponentName from '../Components/ComponentName'
-import Footer from '../Components/Footer'
-import UserProfilSettings from '../Components/Profile/UserProfilSettings'
+import Footer from '../Components/Common/Footer'
+import UserProfilSettings from './UserProfilSettings'
 
 const Home = () => {
   return (
-    <div className='bg-gray-100'>
-      <Nav/>
+    <div className='bg-gray-100'>      
       <AdvertSection/>
       <ComponentName/>
-      <Footer/>
-
     </div>
   )
 }
