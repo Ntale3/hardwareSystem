@@ -1,4 +1,3 @@
-import React from 'react';
 const Categ=[
     {title:'Tiles',
     url:'url',},
@@ -36,8 +35,8 @@ const AdvertSection = () => {
                 <div className='flex-3/4 lg:m-4 my-4 mx-2  '>
 
                     <div className=" justify-center items-center ">                       
-                        <div className="bg-yellow-400  h-80 lg:h-96 flex justify-center items-center">
-                            <h1 className="text-4xl font-bold">Get 50% off on your first order</h1>
+                        <div className="bg-black h-80 lg:h-96 flex justify-center items-center">
+                            <h1 className="text-4xl font-bold text-gray-200">Get 50% off on your first order</h1>
                         </div>
                     </div>
 

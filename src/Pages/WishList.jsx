@@ -1,8 +1,11 @@
-import React from 'react'
+import AdvertSection from '../Components/AdvertSection'
 
 const WishList = () => {
   return (
-    <div>WishList</div>
+    <div>
+
+      <AdvertSection/>
+    </div>
   )
 }
 

@@ -1,27 +1,62 @@
 import {
-  Card,
+ 
   Input,
   Checkbox,
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-
+import { Link ,useNavigate} from "react-router-dom";
+import { useContext, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 export function SignIn() {
+const navigate=useNavigate();
+  const {setToken}=useContext(AppContext)
+  
 
  const [formData,setFormData]=useState({
   email:'',
   password:''
  })
 
- const handleFormData=(event)=>{
-      const {name,value}=event.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
- };
+ const [errors,setErrors]=useState({});
+
+//  const handleFormData=(event)=>{
+//       const {name,value}=event.target;
+//       setFormData({
+//         ...formData,
+//         [name]: value,
+//       });
+//  };
+ 
+ async function submit(e){
+  e.preventDefault()
+  const res =await fetch('/api/login',{
+    method:'post',
+    withCredentials:true,
+    body:JSON.stringify(formData)
+  });
+  const response=await res.json();
+   if(response.errors){
+   setErrors(response.errors);
+  }else{
+    localStorage.setItem('token',response.token);    
+    setToken(response.token);
+    navigate('/');
+  }
+
+  // if(response.ok){
+  //   localStorage.setItem('token',response.token);
+  //   setToken(response.token);
+  //   navigate('/')
+
+  // }else{
+  //     setErrors(response.message)
+  //     console.log(errors);
+  // }
+ 
+  
+ }
+ 
 
  
 
@@ -32,7 +67,7 @@ export function SignIn() {
           <Typography variant="h2" className="font-bold mb-4">Sign In</Typography>
           <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your email and password to Sign In.</Typography>
         </div>
-        <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+        <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2" onSubmit={submit}>
           <div className="mb-1 flex flex-col gap-6">
           <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Your email
@@ -40,21 +75,23 @@ export function SignIn() {
             <Input
               name="email"
               value={formData.email}
-              onChange={handleFormData}
+              onChange={(e)=>setFormData({...formData,email:e.target.value})}
               size="lg"
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
-            />
+             />
+
+            { errors.email&&<p className="text-sm text-red-400">{errors.email[0]}</p>}
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Password
             </Typography>
             <Input
               name="password"
               value={formData.password}
-              onChange={handleFormData}
+              onChange={(e)=>setFormData({...formData,password:e.target.value})}
               type="password"
               size="lg"
               placeholder="********"
@@ -83,7 +120,7 @@ export function SignIn() {
             }
             containerProps={{ className: "-ml-2.5" }}
           />
-          <Button className="mt-6" fullWidth>
+          <Button className="mt-6" fullWidth type="submit">
             Sign In
           </Button>
 

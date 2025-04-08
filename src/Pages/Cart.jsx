@@ -1,6 +1,6 @@
-import { LuChevronUp } from "react-icons/lu";
-import { IoIosArrowDown } from "react-icons/io";
-import Footer from '../Components/Common/Footer';
+// import { LuChevronUp } from "react-icons/lu";
+// import { IoIosArrowDown } from "react-icons/io";
+// import Footer from '../Components/Common/Footer';
 import ItemComponent from "../Components/cart/ItemComponent";
 const Cart = () => {
   return (
@@ -75,7 +75,7 @@ const Cart = () => {
 </div>
 
 </div>
-<Footer/>
+
     </div>
   )
 }

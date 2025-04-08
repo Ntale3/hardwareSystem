@@ -1,28 +1,51 @@
 import {
-    Card,
     Input,
     Checkbox,
     Button,
     Typography,
   } from "@material-tailwind/react";
-  import { Link } from "react-router-dom";
-  import { useRef} from "react";
+  import { Link} from "react-router-dom";
+  import {useContext, useState} from "react";
+import { AppContext } from "../../Context/AppContext";
   
 export function SignUp() {
-  const nameRef=useRef();
-  const emailRef=useRef();
-  const passwordRef=useRef();
-  const passwordConfirmationRef=useRef();
+ 
+  const {setToken}=useContext(AppContext);
 
-function OnSubmit(e){
+  const [formData,setFormData]=useState(
+    {
+      name:"",
+      email:"",
+      password:"",
+      password_confirmation:""
+
+    }
+  );
+  const [error,setError]=useState({});
+//const navigate=useNavigate();
+
+async function OnSubmit(e){
   e.preventDefault();
-  const payload={
-    name:nameRef.current.value,
-    email:emailRef.current.value,
-    password:passwordRef.current.value,
-    password_confirmation:passwordConfirmationRef.current.value
+  const res=await fetch('/api/signup',{
+    method:'POST',       
+   //headers:{
+    withCredentials:true,
+   //},
+    body:JSON.stringify(formData)
+  });
+  const data=await res.json();
+  //console.log(data)
+  if(data.errors){
+   setError(data.errors)
+  }else{
+    localStorage.setItem('token',data.token)
+    setToken(data.token)
+   // navigate('/');
+    //console.log(data);
+    
   }
-  console.log(payload)
+ 
+
 }
 
 
@@ -53,10 +76,11 @@ function OnSubmit(e){
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-               ref={nameRef}
-               name="userName"
+               value={formData.name}
+               onChange={(e)=>setFormData({...formData, name:e.target.value})}
+               name="name"
               />
-
+              {error.name&&<p className="text-sm text-red-400">{error.name[0]}</p>}
               <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
                 Your email
               </Typography>
@@ -67,8 +91,11 @@ function OnSubmit(e){
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-              ref={emailRef}
+              value={formData.email}
+              onChange={(e)=>setFormData({...formData,email:e.target.value})}
+              name="email"
               />
+              {error.email&&<p className="text-sm text-red-400">{error.email[0]}</p>}
               <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
                Password
               </Typography>
@@ -80,8 +107,11 @@ function OnSubmit(e){
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-                ref={passwordRef}
+                value={formData.password}
+                onChange={(e)=>setFormData({...formData,password:e.target.value})}
+                name="password"
               />
+              {error.password&&<p className="text-sm text-red-400">{error.password[0]}</p>}
               <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
                Confirm password
               </Typography>
@@ -93,7 +123,9 @@ function OnSubmit(e){
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-                ref={passwordConfirmationRef}
+                value={formData.password_confirmation}
+                onChange={(e)=>setFormData({...formData,password_confirmation:e.target.value})}
+                name="password_confirmation"
               />
               
             </div>

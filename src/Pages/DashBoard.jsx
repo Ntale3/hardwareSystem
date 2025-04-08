@@ -18,18 +18,18 @@ const DashBoard = () => {
 				<div className='absolute inset-0 backdrop-blur-sm' />
 			</div>
 			<HashRouter>
-			<Sidebar />
+			<Sidebar/>
 			
 			<Routes>
-				<Route path='/' element={<OverviewPage />} />
-				<Route path='/products' element={<ProductsPage />} />
-				<Route path='/users' element={<UsersPage />} />
-				<Route path='/sales' element={<SalesPage />} />
-				<Route path='/orders' element={<OrdersPage />} />
-				<Route path='/analytics' element={<AnalyticsPage />} />
-				<Route path='/settings' element={<SettingsPage />} />
-			</Routes>
-			</HashRouter>
+				<Route path='dash/overview' element={<OverviewPage />} />
+				<Route path='dash/products' element={<ProductsPage />} />
+				<Route path='dash/users' element={<UsersPage />} />
+				<Route path='dash/sales' element={<SalesPage />} />
+				<Route path='dash/orders' element={<OrdersPage />} />
+				<Route path='dash/analytics' element={<AnalyticsPage />} />
+				<Route path='dash/settings' element={<SettingsPage />} />
+			</Routes> 
+			 </HashRouter>
 		</div>
   )
 }

@@ -8,14 +8,14 @@ const SIDEBAR_ITEMS = [
 		name: "Overview",
 		icon: BarChart2,
 		color: "#6366f1",
-		href: "/",
+		href: "dash/overview",
 	},
-	{ name: "Products", icon: ShoppingBag, color: "#8B5CF6", href: "/products" },
-	{ name: "Users", icon: Users, color: "#EC4899", href: "/users" },
-	{ name: "Sales", icon: DollarSign, color: "#10B981", href: "/sales" },
-	{ name: "Orders", icon: ShoppingCart, color: "#F59E0B", href: "/orders" },
-	{ name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
-	{ name: "Settings", icon: Settings, color: "#6EE7B7", href: "/settings" },
+	{ name: "Products", icon: ShoppingBag, color: "#8B5CF6", href: "dash/products" },
+	{ name: "Users", icon: Users, color: "#EC4899", href: "dash/users" },
+	{ name: "Sales", icon: DollarSign, color: "#10B981", href: "dash/sales" },
+	{ name: "Orders", icon: ShoppingCart, color: "#F59E0B", href: "dash/orders" },
+	{ name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "dash/analytics" },
+	{ name: "Settings", icon: Settings, color: "#6EE7B7", href: "dash/settings" },
 ];
 
 const Sidebar = () => {
@@ -33,7 +33,7 @@ const Sidebar = () => {
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
 					onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-					className='p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit'
+					className='p-2 rounded-full hover:bg-gray-700 transition-colors max-w-full'
 				>
 					<Menu size={24} />
 				</motion.button>

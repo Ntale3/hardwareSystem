@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import Card from '../Components/CARDS/Card'
+
 const ComponentName = () => {        
     return (
         <section className="py-12 bg-gray-100 sm:py-16 lg:py-20">
@@ -9,7 +9,7 @@ const ComponentName = () => {
             <p className='text-red-700'>`</p>
         </div>
         <div>
-        <p className='font-semibold'>Today's</p>
+        <p className='font-semibold'>Today</p>
         </div>
        
 <div>
@@ -289,12 +289,13 @@ const ComponentName = () => {
 <div className='flex-3/4 lg:m-4 my-4 mx-2  '>
 
 <div className=" justify-center items-center ">                       
-    <div className="bg-yellow-400  h-80 lg:h-96 flex justify-center items-center">
-        <h1 className="text-4xl font-bold">Get 50% off on your first order</h1>
+    <div className="bg-black h-80 lg:h-96 flex justify-center items-center">
+        <h1 className="text-4xl font-bold text-gray-100">Get 50% off on your first order</h1>
     </div>
 </div>
 
 </div>
+
 </section>
 <section className='py-12 bg-white sm:py-16 lg:py-20"'>
 
