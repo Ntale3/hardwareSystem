@@ -1,8 +1,9 @@
-import Card from '../Components/CARDS/Card'
+// import Card from '../Components/CARDS/Card'
+import ProductCard from './Common/ProductCard';
 
 const ComponentName = () => {        
     return (
-        <section className="py-12 bg-gray-100 sm:py-16 lg:py-20">
+        <section className="py-12  sm:py-16 lg:py-20">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
        <div className='flex items-center gap-2'>
         <div className='w-2 bg-red-700 rounded'>
@@ -20,13 +21,19 @@ const ComponentName = () => {
             <h1 className='md:sm:text-2xl lg:text-3xl'>Flash Sales</h1>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 mt-10 lg:mt-16 lg:gap-4 lg:grid-cols-4">            
+        {/* <div className="grid grid-cols-2 gap-6 mt-10 lg:mt-16 lg:gap-4 lg:grid-cols-4">             */}
+            {/* <<Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
             <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
             <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
-            <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
-            <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
+            <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/> */}
+            <div className='flex flex-col gap-2 lg:flex-row'>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+           
+            </div>
 
-        </div>
+        {/* </div> */}
     </div>
     <div className='text-center p-2 sm:mt-3'>
         <button className='bg-red-700 p-2 lg:p-4 md:p-3 text-sm lg:text-xl rounded-sm text-gray-50'>

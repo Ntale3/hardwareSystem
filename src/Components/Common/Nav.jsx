@@ -1,6 +1,6 @@
 import { IoIosHeartEmpty } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { VscAccount } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {useState} from 'react'

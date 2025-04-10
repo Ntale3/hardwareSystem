@@ -23,13 +23,14 @@ import SettingsPage from "./Pages/adminDashboard/SettingsPage"
 // import Sidebar from "./Components/Common/SideBar"
 // import { AppContext } from './Context/AppContext'
 import DashLayout from './Pages/Layouts/DashLayout'
+import ProductCard from './Components/Common/ProductCard'
 
 const App = () => {
 
   return (
-<>
+<div>
 <HashRouter>
-  <Routes>    
+   <Routes>    
     <Route element={<LayOut/>} path='/'>
     <Route element={<Home/>} index/>  
     <Route element={<Contact/>} path='/contact'/>
@@ -50,16 +51,12 @@ const App = () => {
 				<Route path='dash/orders' element={<OrdersPage />} />
 				<Route path='dash/analytics' element={<AnalyticsPage />} />
 				<Route path='dash/settings' element={<SettingsPage />} />
- </Route>
-      
-      
-   
-     {/* <Route element={<DashBoard/>} path='/dashboard'/> */}
-    
-  </Routes> 
+ </Route>    
+  </Routes>  
  </HashRouter> 
-{/* <DashBoard/> */}
-</>
+ {/* <ProductCard/> */}
+
+</div>
 
   )
 }
