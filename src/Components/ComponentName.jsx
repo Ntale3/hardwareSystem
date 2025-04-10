@@ -1,7 +1,4 @@
-// import Card from '../Components/CARDS/Card'
 import BrowseByCategory from './BrowseByCategory';
-import CategSlider from './CategSlider';
-import ProductCard from './Common/ProductCard';
 import ExploreProducts from './ExploreProducts';
 import Corousel from './Corousel';
 import FlashSale from './FlashSale';

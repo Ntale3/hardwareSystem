@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Corousel from "./Corousel";
 import ProductCard from "./Common/ProductCard";
 
 const responsive = {
@@ -16,13 +15,13 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
+    items: 1.5,
     slidesToSlide: 1 // optional, default to 1.
   }
 };
 const FlashSale = () => {
   return (
-    <Corousel
+    <Carousel
   responsive={responsive}
     >
 <ProductCard/>
@@ -32,7 +31,7 @@ const FlashSale = () => {
 <ProductCard/>
 
 
-    </Corousel>
+    </Carousel>
   )
 }
 
