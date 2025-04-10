@@ -27,7 +27,7 @@ const AdvertSection = () => {
                             {Categ.map((Categ,index)=>{
 
                                 return <li key={index} className="flex items-center ml-1.5 mr-6 lg:pl-13">
-                                <p className="text-xl text-blue-950 hover:text-blue-400  ">{Categ.title}</p> </li>
+                                <p className="text-xl text-blue-950 hover:text-red-800 ">{Categ.title}</p> </li>
                             })}
                         </ul>
                         </div>

@@ -1,41 +1,6 @@
 import Slider from "react-slick";
 import ProductCard from "./Common/ProductCard";
 function CategSlider() {
-  // let settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 1.5,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-          
-  //       }
-  //     }
-  //   ]
-  // };
   const settings = {
     dots: true,
     infinite: true,
@@ -44,12 +9,12 @@ function CategSlider() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
-    cssEase: "linear",
-   
+    cssEase: "linear"
   };
+
   
   return (
-    <div className="">
+    <div>
       
       <Slider {...settings}>
        {/* {
@@ -65,17 +30,13 @@ return <div key={index} className="lg:flex lg:gap-2 lg:ml-3 lg:mr-2 ml-2 ">
 </div>
         })
        } */}
-     
-       
        <ProductCard/>
-       <ProductCard/>  
-       <ProductCard/> 
-
        <ProductCard/>
-       <ProductCard/>  
-       <ProductCard/>       
-           
-     
+       <ProductCard/>
+       <ProductCard/>
+       <ProductCard/>
+       <ProductCard/>
+        
       </Slider>
     </div>
   );

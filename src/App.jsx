@@ -1,13 +1,9 @@
 import Cart from './Pages/Cart'
 import Home from './Pages/Home'
-// import Nav from './Components/Common/Nav'
 import {SignIn} from './Pages/auth/Sign-in'
 import SignUp from './Pages/auth/Sign-up'
-// import DashBoard from './Pages/DashBoard'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-// import CheckOut from './Components/Billing/CheckOut'
 import UserProfilSettings from './Pages/UserProfilSettings'
-// import Footer from './Components/Common/Footer'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import NotFound from './Pages/NotFound'
@@ -20,15 +16,13 @@ import SalesPage from "./Pages/adminDashboard/SalesPage";
 import OrdersPage from "./Pages/adminDashboard/OrdersPage";
 import AnalyticsPage from "./Pages/adminDashboard/AnalyticsPage";
 import SettingsPage from "./Pages/adminDashboard/SettingsPage"
-// import Sidebar from "./Components/Common/SideBar"
-// import { AppContext } from './Context/AppContext'
 import DashLayout from './Pages/Layouts/DashLayout'
-import ProductCard from './Components/Common/ProductCard'
+
 
 const App = () => {
 
   return (
-<div>
+ <div>
 <HashRouter>
    <Routes>    
     <Route element={<LayOut/>} path='/'>
@@ -53,10 +47,13 @@ const App = () => {
 				<Route path='dash/settings' element={<SettingsPage />} />
  </Route>    
   </Routes>  
- </HashRouter> 
- {/* <ProductCard/> */}
+ </HashRouter>   
+  
 
-</div>
+
+  
+  </div>
+
 
   )
 }
