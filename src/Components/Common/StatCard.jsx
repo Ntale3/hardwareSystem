@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart} from "lucide-react";
+import { CiHeart } from "react-icons/ci";
+
+import { FiShoppingCart } from "react-icons/fi";
+
 import { motion } from "framer-motion";
 
 const StatCard = ({ product} ) => {
@@ -14,30 +18,31 @@ const StatCard = ({ product} ) => {
       <motion.img
         src={product.image}
         alt={product.title}
-        className="w-full h-64 object-cover"
+        className="w-full lg:h-64 md:h-56 h-32 object-cover"
         whileHover={{ scale: 1.05}}
         transition={{ duration: 0.4 }}
       />
       <div className="p-4 space-y-3">
-        <h2 className="text-xl font-semibold text-gray-800">{product.title}</h2>
+        <h2 className="lg:text-xl md:text-xl text-sm font-semibold text-gray-800">{product.title}</h2>
         <p className="text-gray-600 text-sm">{product.description}</p>
-        <div className="flex items-center justify-between mt-4">
-          <span className="text-lg font-bold text-blue-600">UGX {product.price}</span>
-          <div className="flex space-x-2">
+        <div className="flex flex-col lg:flex-row md:flex-row lg:flex md:flex  items-center justify-between mt-4">
+          <span className="lg:text-lg text-sm font-bold text-red-800">UGX {product.price}</span>
+          <div className="lg:flex lg:space-x-2 md:flex md:flex md:space-x-2 flex space-x-2 ">
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-xl flex items-center space-x-1"
-              onClick={() => alert("Added to cart!")}
+              className="bg-black hover:bg-gray-900 text-white lg:px-3 md:px-2 md:py-2 px-1.5 py-1.5 lg:py-2 rounded-xl lg:flex lg:flex-row  
+              md:flex md:flex-row flex  items-center gap-2 "
+              // onClick={() => alert("Added to cart!")}
             >
-              <ShoppingCart size={18} />
-              <span>Add to Cart</span>
+              <FiShoppingCart className="lg:text-lg md:text-[19px] text-[8px]"/>
+              <span className="lg:text-[14px] md:text-[14px] text-[6px]">Add to Cart</span>
             </button>
             <button
               onClick={toggleFavorite}
-              className={`p-2 rounded-full border ${
-                isFavorite ? "bg-red-100 text-red-500 border-red-300" : "text-gray-500 border-gray-300"
+              className={`lg:p-2 md:p-0 rounded-full border ${
+                isFavorite ? "bg-red-100 text-red-500 border-red-300" : "text-gray-800 border-gray-700"
               } transition-colors duration-200`}
             >
-              <Heart fill={isFavorite ? "currentColor" : "none"} size={20} />
+              <CiHeart  fill={isFavorite &&"currentColor"} className="lg:text-lg md:text-[19px] text-[10px]" />
             </button>
           </div>
         </div>

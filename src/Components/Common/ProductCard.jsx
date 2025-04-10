@@ -8,7 +8,7 @@ const dummyProduct = {
 };
 
 const ProductCard = () => (
-  <div className=" grid place-items-center min-h-screen ">
+  <div className=" lg:flex lg:place-items-center py-5 md:flex md:gap-3 md:px-2 md:place-items-end px-2">
     <StatCard product={dummyProduct} />
   </div>
 );
