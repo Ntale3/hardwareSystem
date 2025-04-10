@@ -8,7 +8,7 @@ const dummyProduct = {
 };
 
 const ProductCard = () => (
-  <div className="p-4 grid place-items-center min-h-screen bg-gray-50">
+  <div className=" grid place-items-center min-h-screen ">
     <StatCard product={dummyProduct} />
   </div>
 );

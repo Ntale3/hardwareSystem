@@ -5,7 +5,7 @@ import ComponentName from '../Components/ComponentName'
 
 const Home = () => {
   return (
-    <div className='bg-gray-100'>      
+    <div className=''>      
       <AdvertSection/>
       <ComponentName/>
     </div>

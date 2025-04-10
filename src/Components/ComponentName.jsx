@@ -1,4 +1,5 @@
 // import Card from '../Components/CARDS/Card'
+import CategSlider from './CategSlider';
 import ProductCard from './Common/ProductCard';
 
 const ComponentName = () => {        
@@ -17,7 +18,7 @@ const ComponentName = () => {
 </div>
         
        </div>
-       <div className='py-5'>
+       <div className='py-2'>
             <h1 className='md:sm:text-2xl lg:text-3xl'>Flash Sales</h1>
         </div>
 
@@ -26,12 +27,19 @@ const ComponentName = () => {
             <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
             <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/>
             <Card image={'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/4/product-1.png'} itemName={'Beoplay M5 Bluetooth Speaker'} price={99.00}/> */}
-            <div className='flex flex-col gap-2 lg:flex-row'>
+            
+                {/* <div className='flex flex-col gap-2 lg:flex-row'>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>
+            
+            </div> */}
+
+            <CategSlider/>
+            
+            
            
-            </div>
+            {/* </div> */}
 
         {/* </div> */}
     </div>

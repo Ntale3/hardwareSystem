@@ -10,7 +10,7 @@ const StatCard = ({ product} ) => {
   };
 
   return (
-    <div className="max-w-sm w-full bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+    <div className="rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
       <motion.img
         src={product.image}
         alt={product.title}
