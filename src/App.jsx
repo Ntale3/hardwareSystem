@@ -23,7 +23,7 @@ const App = () => {
 
   return (
  <div>
-<HashRouter>
+ <HashRouter>
    <Routes>    
     <Route element={<LayOut/>} path='/'>
     <Route element={<Home/>} index/>  
@@ -47,7 +47,7 @@ const App = () => {
 				<Route path='dash/settings' element={<SettingsPage />} />
  </Route>    
   </Routes>  
- </HashRouter>   
+ </HashRouter>    
   
 
 

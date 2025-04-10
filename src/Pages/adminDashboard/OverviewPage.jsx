@@ -2,11 +2,10 @@ import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 import Header from "../../Components/Common/Header";
-import StatCard from "../../Components/Common/StatCard";
 import SalesOverviewChart from "../../Components/overview/SalesOverviewChart";
 import CategoryDistributionChart from "../../Components/overview/CategoryDistributionChart";
 import SalesChannelChart from "../../Components/overview/SalesChannelChart";
-
+import StatCard from '../../Components/Common/StatCard'
 const OverviewPage = () => {
 	return (
 		<div className='flex-1 overflow-auto relative z-10'>

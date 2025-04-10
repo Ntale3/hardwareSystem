@@ -164,22 +164,22 @@ const ComponentName = () => {
        </div>
        <div className='py-5'>
    <p className='md:sm:text-2xl lg:text-3xl ml-4 md:ml-6 lg:ml-8'>New Arrival</p>
-   <div className='flex  gap-2 '>
-    <div className=' bg-black col-span-2 row-span-2 h-100 w-50  md:w-50 lg:w-100 lg:ml-50 md:ml-6 ml-4'>
+   <div className='flex  gap-2 lg:ml-0  ml-4'>
+    <div className=' bg-black col-span-2 row-span-2 h-100 w-50  md:w-50 lg:w-100 lg:ml-50 md:ml-6 ml-4 hidden lg:block'>
         1
     </div>
     
     <div className='flex flex-col gap-2 '>
-<div className='flex bg-black row-span-2  sm:w-50 w-80 md:w-70 lg:w-150 h-48 '>
+<div className='flex bg-black row-span-2   w-80 md:w-170 lg:w-150 h-48 '>
 2
 </div>
 
 <div className='flex gap-2'>
-    <div className='col-span-1 bg-black sm:w-24 w-39 md:w-34 lg:w-74 h-50'>
+    <div className='col-span-1 bg-black sm:w-24 w-39 md:w-85 lg:w-74 h-50'>
 3
     </div>
 
-    <div className='col-span-1 bg-black sm:w-24 w-39 md:w-34 lg:w-74 h-50'>
+    <div className='col-span-1 bg-black sm:w-24 w-39 md:w-85 lg:w-74 h-50'>
 4
     </div>
 </div>

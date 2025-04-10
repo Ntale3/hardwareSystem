@@ -1,6 +1,4 @@
-import React from 'react'
 import FormCompo from '../Components/Billing/FormCompo'
-import Nav from '../Components/Common/Nav'
 
 const UserProfilSettings = () => {
   return (
