@@ -7,6 +7,7 @@ import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react";
 import CategoryDistributionChart from "../../Components/overview/CategoryDistributionChart";
 import SalesTrendChart from "../../Components/products/SalesTrendChart";
 import ProductsTable from "../../Components/products/ProductsTable";
+import ProductForm from "../../Components/products/ProductForm";
 
 const ProductsPage = () => {
 	return (
@@ -33,6 +34,10 @@ const ProductsPage = () => {
 				<div className='grid grid-col-1 lg:grid-cols-2 gap-8'>
 					<SalesTrendChart />
 					<CategoryDistributionChart />
+					
+				</div>
+				<div className="mt-6 ">
+				<ProductForm/>
 				</div>
 			</main>
 		</div>

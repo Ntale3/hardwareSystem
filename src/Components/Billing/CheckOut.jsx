@@ -1,12 +1,9 @@
-import React from 'react'
 import FormCompo from './FormCompo'
 import Payment from './Payment'
-import Footer from '../Common/Footer'
-import Nav from '../Common/Nav'
 const CheckOut = () => {
   return (
     < div className='mx-auto'>
-    <Nav/>
+
 <div>
     <div>
         <p className='text-xl font-bold m-6'>Billing Details</p>
@@ -33,11 +30,12 @@ const CheckOut = () => {
 
    <div className='mr-8 ml-6  lg:w-1/2 mb-2 '>
     <Payment/>
+    
     </div>
     </div> 
 </div>   
 
-  <Footer/>
+ 
    
     </div>
   )

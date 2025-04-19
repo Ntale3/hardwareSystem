@@ -1,6 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from './Common/ProductCard';
+// import { useGetAllproductsQuery } from '../Features/ProductsApi';
 const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -22,15 +23,19 @@ const responsive = {
   
   
   const Corousel = () => {
+  //   const {data}=useGetAllproductsQuery();
+  //  const prdts={...data};
     return (
         <Carousel partialVisible={true} responsive={responsive}>
+         
+        
+          <ProductCard/> 
            <ProductCard/> 
            <ProductCard/> 
            <ProductCard/> 
            <ProductCard/> 
-           <ProductCard/> 
-           <ProductCard/> 
-       
+           <ProductCard/>  
+            <ProductCard/>
        </Carousel>
       )
     

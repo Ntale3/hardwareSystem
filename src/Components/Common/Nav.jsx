@@ -93,7 +93,7 @@ const Nav = () => {
     
         <div>
 {
-    sideBarVisible&& <div className="fixed inset-y-0 left-0 bg-gray-900 w-64 p-4 z-50 text-gray-300" onClick={(e) => e.stopPropagation()}>
+    sideBarVisible&& <div className="fixed inset-y-0 left-0 bg-black w-64 p-4 z-50 text-gray-300" onClick={(e) => e.stopPropagation()}>
     <div className="flex items-center gap-8  border-b-[1px] pb-8 justify-center">
         <p><RxCross2 size={30} onClick={sideBarToggle}/></p>
         <span className="text-2xl font-bold">LOGO</span>
@@ -184,8 +184,12 @@ const Nav = () => {
                   />
                 </div>
         </li>
-       <Link to={'/wishList'}>  <li><IoIosHeartEmpty size={25}/></li></Link>
-        <Link to={'/cart'}><li><LuShoppingCart size={25}/></li></Link>
+       <Link to={'/wishList'}>  <li><IoIosHeartEmpty size={25} className="relative"/>
+       <span className="absolute bg-red-800 text-gray-300 rounded-full p-0.5 text-[12px] ml-3 -mt-8 font-bold">1</span>
+       </li></Link>
+        <Link to={'/cart'}><li><LuShoppingCart size={25} className="relative"/>
+        <span className="absolute bg-red-800 text-gray-300 rounded-full p-0.5 text-[12px] ml-3 -mt-8 font-bold">1</span>
+        </li></Link>
         <Link to={'/profile'}><li><VscAccount size={25}/></li></Link>
         <li className=" lg:hidden" onClick={()=>sideBarToggle()}><GiHamburgerMenu size={25}/></li>
       </ul>
